@@ -1,0 +1,10 @@
+{
+  "name": "pseo-future",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+		"build:gh": "slidev build --base /pseo-future-slides/",
+    "dev": "slidev",
+    "export": "slidev export"
+  }
+}
