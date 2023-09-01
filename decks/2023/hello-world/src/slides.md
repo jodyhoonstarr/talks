@@ -1,5 +1,5 @@
 ---
-layout: test-layout
+layout: glow
 css: unocss
 colorSchema: dark
 transition: fade-out
