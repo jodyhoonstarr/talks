@@ -1,6 +1,7 @@
 ---
-layout: glow
+layout: cover
 css: unocss
+highlighter: shiki
 colorSchema: dark
 transition: fade-out
 ---

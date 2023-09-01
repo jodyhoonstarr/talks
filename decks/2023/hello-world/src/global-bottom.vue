@@ -16,8 +16,5 @@
     </div>
     <div class="absolute bottom-0 right-0 bg-white mix-blend-overlay left-auto top-0 h-auto w-px"> </div>
     <div class="absolute inset-x-0 bottom-0 right-0 h-px bg-white mix-blend-overlay w-[calc(100%-1px)]"> </div>
-    <div class="slidev-layout default">
-      <slot />
-    </div>
   </div>
 </template>
