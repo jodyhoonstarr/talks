@@ -4,6 +4,10 @@ css: unocss
 highlighter: shiki
 colorSchema: dark
 transition: fade-out
+fonts:
+  sans: 'IBM Plex Sans'
+  serif: 'IBM Plex Serif'
+  mono: 'IBM Plex Mono'
 ---
 
 # Slidev
