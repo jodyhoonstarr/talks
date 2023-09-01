@@ -25,6 +25,11 @@ jobs:
       - name: Build
         run: pnpm run --filter template build:gh
 
+      - name: Generate index
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: cd ./.github && sudo ./generate_index.sh -r "$GITHUB_REPOSITORY"
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

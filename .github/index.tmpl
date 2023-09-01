@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Talks</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="pygment_trac.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>My Slides</h1>
+        <p>This project contains a listing of talks and slide decks</p>
+      </header>
+      <section>
+        <h2>Links</h2>
+        <div id="slide-decks"></div>
+      </section>
+    </div>
+
+    <script>
+      (async () => {
+        const [userName, repoName] = "${REPOSITORY}".split("/");
+        const rootUrl = "https://api.github.com/repos/" + userName + "/" + repoName + "/contents/?ref=gh-pages";
+        const response = await fetch(rootUrl);
+        const data = await response.json();
+
+        const years = data.filter(
+          (file) => file.type === "dir" && file.name.match(/^\d{4}$/)
+        );
+        const yearResponses = await Promise.all(years.map((e) => fetch(e.url)));
+
+        const talks = await Promise.all(yearResponses.map((e) => e.json()));
+
+        let rootList = "<ul>";
+        for (let year of years) {
+          let childList = `<li>${year.name}<ul>`;
+
+          for (let talk of talks.flat()) {
+            if (talk.path.includes(year.name)) {
+              const talkUrl = "https://" + userName + ".github.io/" + repoName + "/" + talk.path;
+              childList += '<li><a href="' + talkUrl + '">' + talk.name + '</a></li>';
+            }
+          }
+
+          childList += "</ul></li>";
+          rootList += childList;
+        }
+
+        rootList += "</ul>";
+        document.getElementById("slide-decks").innerHTML = rootList;
+      })();
+    </script>
+  </body>
+</html>
