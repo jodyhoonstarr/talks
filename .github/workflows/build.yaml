@@ -23,7 +23,7 @@ jobs:
         run: pnpm recursive install
 
       - name: Build
-        run: pnpm run --filter template build:gh
+        run: pnpm run -r build:gh
 
       - name: Generate index
         env:
