@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-		"build:gh": "slidev build --base /talks/$(pwd | sed 's/^.*decks\///' | sed 's/src*//') --out ../../../../dist/$(pwd | sed 's/^.*decks//' | sed 's/src*//') ",
+		"build:gh": "slidev build --base /talks$(pwd | sed 's/^.*decks//' | sed 's/src*//') --out ../../../../dist/$(pwd | sed 's/^.*decks//' | sed 's/src*//') ",
     "dev": "slidev",
     "export": "slidev export",
 		"echo": "echo $(pwd | sed 's/^.*decks//' | sed 's/src*//')"
