@@ -26,3 +26,8 @@ h6 {
 iframe {
   background: rgba(3, 7, 18, 1); /* bg-gray-950 */
 }
+ 
+
+.shiki-dark {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
