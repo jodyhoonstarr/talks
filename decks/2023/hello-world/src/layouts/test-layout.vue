@@ -1,29 +1,23 @@
 <template>
   <div
-    class="absolute inset-0 -z-10 overflow-hidden bg-gray-950 lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem]">
+    class="absolute inset-0 -z-10 overflow-hidden bg-gray-950 right-[40rem] min-w-[calc(100%-1rem)]">
     <svg
-      class="absolute -bottom-48 left-[-40%] h-[80rem] w-[180%] lg:-right-40 lg:bottom-auto lg:left-auto lg:top-[-40%] lg:h-[180%] lg:w-[80rem]"
+      class="absolute -right-40 bottom-auto left-auto top-[-40%] h-[180%] w-[80rem]"
       aria-hidden="true">
       <defs>
-        <radialGradient id=":S1:-desktop" cx="100%">
-          <stop offset="0%" stop-color="rgba(56, 189, 248, 0.3)"></stop>
-          <stop offset="53.95%" stop-color="rgba(0, 71, 255, 0.09)"></stop>
-          <stop offset="100%" stop-color="rgba(10, 14, 23, 0)"></stop>
-        </radialGradient>
-        <radialGradient id=":S1:-mobile" cy="100%">
+        <radialGradient id="commit-gradient" cx="100%">
           <stop offset="0%" stop-color="rgba(56, 189, 248, 0.3)"></stop>
           <stop offset="53.95%" stop-color="rgba(0, 71, 255, 0.09)"></stop>
           <stop offset="100%" stop-color="rgba(10, 14, 23, 0)"></stop>
         </radialGradient>
       </defs>
-      <rect width="100%" height="100%" fill="url(#:S1:-desktop)" class="hidden lg:block"></rect>
-      <rect width="100%" height="100%" fill="url(#:S1:-mobile)" class="lg:hidden"></rect>
+      <rect width="100%" height="100%" fill="url(#commit-gradient)" class="block"></rect>
     </svg>
-    <div
-      class="absolute inset-x-0 bottom-0 right-0 h-px bg-white mix-blend-overlay lg:left-auto lg:top-0 lg:h-auto lg:w-px">
-    </div>
+    <div class="absolute bottom-0 right-0 bg-white mix-blend-overlay left-auto top-0 h-auto w-px"> </div>
+    <div class="absolute inset-x-0 bottom-0 right-0 h-px bg-white mix-blend-overlay"> </div>
   </div>
-  <div class="absolute inset-x-0 bottom-0 right-0 h-px bg-white mix-blend-overlay lg:left-auto lg:top-0 lg:h-auto lg:w-px"></div>
+  <div class="absolute bottom-0 right-0 bg-white mix-blend-overlay left-auto top-0 h-auto w-px"> </div>
+  <div class="absolute inset-x-0 bottom-0 right-0 h-px bg-white mix-blend-overlay w-[calc(100%-1rem-1px)]"></div>
   <div class="slidev-layout default">
     <slot />
   </div>
