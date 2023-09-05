@@ -1,0 +1,33 @@
+/* .slidev-code {
+  font-size: 1em !important;
+  line-height: 1.4em !important;
+} */
+
+h6 {
+  text-transform: initial !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+.dark #slide-content {
+  background-color: rgba(3, 7, 18, 1) !important; /* bg-gray-950 */
+}
+
+/* Transitions */
+.slidev-vclick-target {
+  transition: opacity 400ms ease;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+iframe {
+  background: rgba(3, 7, 18, 1); /* bg-gray-950 */
+}
+ 
+
+.shiki-dark {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
